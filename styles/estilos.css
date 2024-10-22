@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Poppins';
+}
+:root{
+    /*variables*/
+    --color_text-primary: #fff;
+    --color_text-secondary: #00a637;
+    --text_paragraph: 32px;
+    --main_color-primary: #007BFF; /* Ejemplo de color primario */
+    --color_text-tertiary: #333333; /* Ejemplo de color terciario */
+    --main_color-secundary: #8ADA74;     /* Color secundario */
+    --background-color: #EFF0EF;         /* Color de fondo */
+    --lowText_font_size: 16px;           /* Tamaño de fuente para texto pequeño */
+    --text_size_title: 40px;             /* Tamaño de fuente para títulos */
+    --text_title_card: 24px;             /* Tamaño de fuente para títulos de tarjeta */
+    --text_title_cardv2: 20px;           /* Tamaño de fuente para subtítulos de tarjeta */
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+    --box_shadow-hover: 0px 10px 70px -10px rgba(0,0,0,0.3);
+}
+body{
+/*background-color: #2d7319;*/
+
+    background-image: url('../imagenes/logo/mincra.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    width: 100%;
+    height: 100px;
+
+
+}
+
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto; /* Centers the element horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img{
+    width: 100px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    transition: background-color 0.3s ease; 
+    position: sticky;
+    top: 0; 
+    width: 100%;
+    z-index: 1000; 
+
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+    padding: 10px;
+}
+
+.menu nav ul li a{
+    color: var(--color_text-tertiary)
+    font-size: 16px;
+    position: relative;
+}
+
+.menu nav ul li a:hover{
+    color:var(--color_text-secondary);
+    border-radius: 5px;
+}
+.socialmedia{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.socialmedia img{
+    width: 95px;
+    padding: 20px;
+}
+.btn_quote {
+    /* Hace que el botón se muestre como un bloque */
+    display: block;
+
+    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
+    padding: 8px 40px;
+
+    /* Añade un borde sólido de 2px del color de texto primario */
+    border: 2px solid var(--color_text-primary);
+
+    /* Aplica bordes redondeados de 8px al botón */
+    border-radius: 8px;
+
+    /* Hace el texto más grueso */
+    font-weight: 500;
+
+    /* Aplica el color de texto terciario al texto del botón */
+    color: var(--color_text-tertiary);
+
+    /* Añade un margen lateral de 20px */
+    margin: 0px 20px;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades */
+    transition: all 300ms;
+}
+
+.btn_quote:hover {
+    /* Cambia el color del texto a blanco cuando se pasa el ratón */
+    color: rgb(0, 0, 0);
+
+    /* Cambia el fondo del botón al color primario */
+    background: var(--color_text-primary);
+}
+
+/*PORTADA*/
+.container_cover{
+   padding-top: 100px;
+   padding-bottom: 100px;
+   display: flex;
+
+}
+
+.cover{
+    max-width: 1200px;
+    margin: auto;
+   display: flex;
+   margin-top: 100px;
+   align-items: center; 
+   padding: 0px 20px;
+   border-radius: 20px;
+   justify-content: space-between; 
+   background-color: rgba(255, 255, 255, 0.5); 
+
+}
+
+.text_cover{
+    width: 100%;
+    padding-right: 150px;
+}
+
+.text_cover h1{
+    font-size: var(--text_paragraph);
+    margin-top: 40px;
+}
+
+.text__cover p {
+    /* Establece el tamaño de fuente usando la variable --text_paragraph */
+    font-size: var(--text_paragraph);
+
+    /* Añade un margen superior de 40px para separar del contenido anterior */
+    margin-top: 40px;
+
+    /* Aplica un color al texto usando la variable --color_text-tertiary */
+    color: var(--color_text-tertiary);
+}
+
+.btn_text {
+    display: block;
+    width: 150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: #007BFF; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn_text:hover {
+    background: transparent;
+    border: 2px solid #007BFF; /* Borde azul al hacer hover */
+    color: #333333; /* Color de texto gris oscuro al hacer hover */
+}
+.image__cover {
+    /* Ocupa el 100% del ancho disponible para la imagen */
+    width: 100%;
+}
+
+.image_cover img {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 550px;
+    height: auto;
+}
+
+/*las boxes*/ 
+.container_trust {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.container_card-primary {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.container_box-cardPrimary {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box_card-primary {
+    flex: 1;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: var(--box_shadow-primary); /* Aplica la sombra definida en la variable */
+    padding: 20px;
+    margin: 14px;
+    text-align: center;
+    transition: all 300ms /* Añade transición para el efecto de hover */
+}
+
+.box_card-primary:hover {
+    border: 1px;
+    transform: translateY(-10px); /* Desplaza la tarjeta hacia arriba */
+    box-shadow: var(--box_shadow-hover); /* Aumenta la sombra para el efecto de profundidad */
+}
+
+.box_card-primary img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box_card-primary h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.box_card-primary p {
+    font-size: 1em;
+    color: #555;
+}
+.container_trust.container_card-primary {
+    color: #fff; /* Cambia el color del texto a blanco para todos los textos dentro del contenedor */
+}
+/*Otras cosas*/
+.container_about_div_offset {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px; /* Añade espacio entre el texto y las imágenes */
+}
+
+.text_about {
+    flex: 1; /* Ocupa el espacio disponible a la izquierda */
+    padding-right: 40px;
+}
+
+.text_about h1 {
+    font-size: var(--text_paragraph);
+    margin-top: 40px;
+    color: var(--color_text-secundary);
+    font-weight: 600;
+}
+
+.text_about p {
+    font-size: 0.875rem; 
+    margin-top: 20px; /* Reduce el margen superior para que el párrafo esté más cerca del título */
+    color: var(--color_text-tertiary);
+}
+
+.btn_text-about_btn_text {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: #007BFF;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn_text-about_btn_text:hover {
+    background: transparent;
+    border: 2px solid #007BFF;
+    color: #333333;
+}
+
+.image_about {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 5px; /* Espacio entre las imágenes */
+}
+
+.image_about img {
+    width: 300px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 15px; /* Ajusta el valor para determinar cuán redondeadas serán las esquinas */
+    margin-right: 5px; /* Espaciado entre las imágenes */
+    overflow: hidden; /* Asegura que el contenido que sobrepase no se muestre */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.image_about img:first-child {
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%); /* Corta la imagen a la mitad inferior */
+}
+.image_about img:last-child {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%); /* Corta la imagen a la mitad superior */
+}
+/*SERVICIOS*/
+
+/* Estilo para la sección de servicios */
+.container__service {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.container__card-primary {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.container__box-cardPrimary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.box__card-primary {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: var(--box_shadow-primary);
+    padding: 20px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.box__card-primary:hover {
+    border: 1px solid #ddd;
+    transform: translateY(-10px);
+    box-shadow: var(--box_shadow-hover);
+}
+
+.box__card-primary img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box__card-primary h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.box__card-primary p {
+    font-size: 1em;
+    color: #555;
+}
+
+.container__service .text__service {
+    color: #fff
+}
+/*CONTACTOS*/
+/* Estilo para el contenedor de contacto */
+.container__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.8); /* Gris oscuro transparente */
+    border-radius: 20px;
+    box-shadow: var(--box_shadow-primary);
+    margin: 40px auto;
+}
+
+.contact__form {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+
+.contact__form h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.form__group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form__group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.form__group input,
+.form__group textarea,
+.form__group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 300ms;
+}
+
+
+.form__group input[type="email"] {
+    border-color: #ff4d4d; /* Resalta el campo de email en rojo */
+}
+
+.form__group textarea {
+    resize: vertical; /* Permite redimensionar el área de texto solo verticalmente */
+}
+
+.form__group input:focus,
+.form__group textarea:focus,
+.form__group select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.form__group small {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.btn__send {
+    display: block;
+    margin:auto;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: #007BFF;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.btn__send:hover {
+    background: transparent;
+    border: 2px solid #007BFF;
+    color: white;
+}
+
+.contact__image {
+    flex: 1 1 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow-primary);
+}
+
+/*VIDEOS Y AUDIOS*/
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    gap: 40px;
+    margin: 40px auto;
+}
+ 
+.video-section,
+.audio-section,
+.trailer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Espacio entre secciones */
+}
+
+.audio-section,
+.trailer-section,
+.video-section h2 {
+    margin-bottom: 10px; /* Espacio entre el h2 y el contenido */
+    font-size: 24px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+}
+
+video, audio {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/*TABLA DE USUARIOS*/
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para el contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto; /* Centra el contenedor horizontalmente y agrega margen superior */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#userTable th, #userTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#userTable th {
+    background-color: rgba(240, 240, 240, 0.8); /* Fondo ligeramente gris para los encabezados */
+    font-weight: bold;
+}
+
+#userTable tr:hover {
+    background-color: rgba(220, 220, 220, 0.6); /* Color de fondo al pasar el ratón sobre la fila */
+}
+
+#userTable td {
+    color: #333;
+}
+
+/*Footer*/
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centra el texto en el pie de página */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espacia logos y ESRB */
+    align-items: center; /* Alinea verticalmente */
+    margin-bottom: 20px; /* Espacio entre el contenido y las columnas */
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra verticalmente las imágenes */
+    gap: 20px;
+}
+
+.footer-images img {
+    max-width: 100px; /* Ajusta el tamaño de las imágenes de Mojang y Xbox */
+}
+
+.footer-images-right {
+    display: flex; /* Asegura que la imagen de ESRB esté centrada verticalmente */
+    justify-content: center; /* Centra horizontalmente la imagen de ESRB */
+}
+
+.footer-images-right img {
+    max-width: 80px; /* Ajusta el tamaño de la imagen de ESRB */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.footer-info {
+    flex-direction: column;
+    align-items: center; /* Centra el texto debajo de los logos */
+    margin-top: 10px; /* Espacio entre imágenes y texto de copyright */
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten */
+    justify-content: center; /* Centra las columnas */
+    margin-top: 10px; /* Espacio entre la sección de logos y las columnas */
+}
+
+.footer-columns div {
+    margin: 0 20px; /* Espacio entre las columnas */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* Espacio entre el título y la lista */
+}
+
+.footer-columns h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-columns li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.green-link {
+    color: #00ff00; /* En verde */
+    text-decoration: none;
+}
+
+.green-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los colores de texto */
+.white-text {
+    color: white; /* Color blanco para ciertos textos */
+}
+
+.green-text {
+    color: #00ff00; /* Color verde para textos específicos */
+}
+/*Proyectos*/
+
+.container__proyect {
+    padding: 100px 0px;
+    background: rgba(220, 220, 220, 0.6);
+    margin-top: 100px;
+}
+
+.container__card-proyect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card__proyect {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box; /* Asegúrate de que el fondo de la tarjeta no se recorte */
+}
+
+.card-text { 
+    color: rgba(255, 255, 255, 0.8); /* Color blanco grisáceo */
+}
+
+.card__proyect h2, .card__proyect p {
+    margin: 0;
+    position: relative; /* Para que el texto esté en el flujo normal */
+    z-index: 1; /* Asegúrate de que el texto esté por encima de la imagen de fondo */
+}
+
+.card__proyect:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+}
+
+/* Ajustar el margen para el texto superior */
+.text__service {
+    margin-bottom: 30px; /* Ajusta este valor según sea necesario para subir el texto */
+}
+
+/*End Proyectos*/

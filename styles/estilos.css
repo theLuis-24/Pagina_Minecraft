@@ -735,5 +735,74 @@ input[type="text"] {
 .text__service {
     margin-bottom: 30px; /* Ajusta este valor según sea necesario para subir el texto */
 }
+/*EQUIPO*/
+
+/* Espacio adicional superior */
+.team-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: rgba(220, 220, 220, 0.6); /* Fondo transparente */
+    padding: 40px 0; /* Separación superior e inferior */
+    margin-top: 30px; /* Espacio entre la sección anterior y esta */
+}
+
+.team-section h2 {
+    color: #6e44ff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de miembros del equipo */
+.team-member {
+    background-color: rgba(220, 220, 220, 0.9); /* Fondo más opaco */
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.team-member h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Efecto de hover para que la tarjeta sobresalga */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
 
 /*End Proyectos*/

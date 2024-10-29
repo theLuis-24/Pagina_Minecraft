@@ -404,6 +404,10 @@ header{
 .container__service .text__service {
     color: #fff
 }
+
+.card-text{
+    background-color: rgba(10, 9, 9, 0.5);
+}
 /*CONTACTOS*/
 /* Estilo para el contenedor de contacto */
 .container__contact {
@@ -619,9 +623,9 @@ input[type="text"] {
 
 .footer-images {
     display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra verticalmente las imágenes */
+    justify-content: center;
     gap: 20px;
+    margin-top: 50px; /* Baja las imágenes de Mojang y Xbox */
 }
 
 .footer-images img {
@@ -629,8 +633,9 @@ input[type="text"] {
 }
 
 .footer-images-right {
-    display: flex; /* Asegura que la imagen de ESRB esté centrada verticalmente */
-    justify-content: center; /* Centra horizontalmente la imagen de ESRB */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Baja la imagen ESRB */
 }
 
 .footer-images-right img {
@@ -646,9 +651,9 @@ input[type="text"] {
 
 .footer-columns {
     display: flex;
-    flex-wrap: wrap; /* Permite que las columnas se ajusten */
-    justify-content: center; /* Centra las columnas */
-    margin-top: 10px; /* Espacio entre la sección de logos y las columnas */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -100px; /* Sube las columnas de texto */
 }
 
 .footer-columns div {
@@ -688,6 +693,10 @@ input[type="text"] {
 
 .green-text {
     color: #00ff00; /* Color verde para textos específicos */
+}
+.footer-info {
+    margin-top: 30px;
+    text-align: center;
 }
 /*Proyectos*/
 
